@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import Image from "../Image";
 
 const Hero = () => {
   return (
     <Wrapper>
-      <HeroImage src="/images/hero-img.jpg" />
+      <ImageWrapper >
+        <Image src={"/images/hero-img.jpg"}  />
+      </ImageWrapper>
       <Swoop src="/swoop.svg" />
     </Wrapper>
   );
@@ -20,7 +23,7 @@ const Wrapper = styled.section`
   background: hsl(0deg 0% 1%);
 `;
 
-const HeroImage = styled.img`
+const ImageWrapper = styled.div`
   display: block;
   width: 500px;
   height: 500px;
