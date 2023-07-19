@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <Wrapper>
       <ImageWrapper >
-        <Image src={"/images/hero-img.jpg"}  />
+        <Image src={"/images/hero-img.jpg"} alt="Image of a cat staring at you"  />
       </ImageWrapper>
-      <Swoop src="/swoop.svg" />
+      <Swoop src="/swoop.svg" alt="" />
     </Wrapper>
   );
 };
