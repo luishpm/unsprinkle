@@ -14,7 +14,7 @@ const PhotoGridItem = ({id, src, alt, tags}) => {
         </Anchor>
         <Tags>
           {tags.map((tag) => (
-              <Tag key={tag}>{tag}</Tag>
+              <Tag key={tag} style={{'--shrink': Math.pow(2, tag.length)}}>{tag}</Tag>
           ))}
         </Tags>
       </article>
@@ -40,16 +40,21 @@ const ImageWrapper = styled.div`
 
 const Tags = styled.ul`
   display: flex;
-  flex-wrap: wrap;
+  white-space: nowrap;
   gap: 8px;
 `;
 
 const Tag = styled.li`
+  --shrink: 1;
   padding: 4px 8px;
   background: var(--color-gray-300);
   font-size: 0.875rem;
   font-weight: 475;
   color: var(--color-gray-800);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: var(--shrink);
+  min-width: 50px;
 `;
 
 export default PhotoGridItem;
